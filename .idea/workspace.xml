@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6be84b89-3a32-4ade-a92e-12ec7aa97b4e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dbz-revolution.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/core/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/core/config_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/core/state.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/core/version.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/game/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/game/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/game/network.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/game/player.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/game/protocol.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/game/session.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/game/world.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/game/ws_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/screens/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/screens/character_select.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/screens/create_character.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/screens/game.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/screens/loading.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/screens/login.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/screens/register.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/ui/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/ui/admin_panel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/ui/bottom_menu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/ui/button.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/ui/chat_panel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/ui/checkbox.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/ui/config_panel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/ui/input.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/ui/mission_panel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/ui/panel_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/ui/toast.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/ui/top_bar.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/launcher/ui/ui_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/network/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/network/handle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/network/receiver.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/network/sender.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/network/server_status.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/network/socket_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/protocol/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/protocol/buffer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/protocol/opcodes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/run_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/core/client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/core/logger" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/core/logger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/core/protocol.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/core/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/core/world.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/migrate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/models/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/models/equipment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/models/inventory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/models/player.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/models/player_warrior.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/models/team.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/models/vip.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/models/warrior_template.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/queries/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/queries/account.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/queries/inventory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/queries/player.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/queries/team.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/queries/vip.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/queries/warrior.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/schema.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/database/seed.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/gui/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/gui/components/logs_tab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/gui/components/players_tab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/gui/components/top_bar.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/gui/server_gui.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/gui/server_panel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/gui/tabs/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/gui/tabs/admin_tab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/gui/tabs/logs_tab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/gui/tabs/players_tab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/gui/tabs/status_tab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/handlers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/handlers/auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/handlers/chat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/handlers/system.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/launcher/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/launcher/log_handler.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/launcher/server_gui.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/launcher/server_process.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/logs/server.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/migrate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/network/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/network/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/protocol/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/protocol/buffer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/protocol/opcodes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/protocol/router.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/run_server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/start_server.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/start_server_gui.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/server/app/routes/auth.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="38BLB7FvMd2Y8jvWRj6GwSUlW5K" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.login.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mission_panel.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_client.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_server.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sender.executor&quot;: &quot;Run&quot;,
+    &quot;Python.start_server_gui.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/dbz-revolution/server/alembic&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dbz-revolution\server\alembic" />
+      <recent name="C:\dbz-revolution\server\app\GUI" />
+      <recent name="C:\dbz-revolution\server\database\queries" />
+      <recent name="C:\dbz-revolution\server\database\model" />
+      <recent name="C:\dbz-revolution\server\handlers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dbz-revolution\server\gui" />
+      <recent name="C:\dbz-revolution\server" />
+      <recent name="C:\dbz-revolution\client\game" />
+      <recent name="C:\dbz-revolution\server\app\game\entities" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-ca5e2b39c7df-6e1f45a539f7-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.29346.308" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6be84b89-3a32-4ade-a92e-12ec7aa97b4e" name="Changes" comment="" />
+      <created>1768267878723</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1768267878723</updated>
+      <workItem from="1768267879731" duration="6560000" />
+      <workItem from="1768341423163" duration="1242000" />
+      <workItem from="1768431366428" duration="80000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/server/database/models/player.py</url>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/dbz_revolution$main.coverage" NAME="main Coverage Results" MODIFIED="1768268646740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/server/app" />
+  </component>
+</project>
