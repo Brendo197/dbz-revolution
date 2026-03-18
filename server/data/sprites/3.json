@@ -1,0 +1,101 @@
+{
+    "id": 3,
+    "animations": {
+        "Idle": {
+            "tick": 120,
+            "loop": true,
+            "frames": [
+                {
+                    "x": 406,
+                    "y": 154,
+                    "w": 43,
+                    "h": 66,
+                    "origin_x": 0,
+                    "origin_y": 0,
+                    "offset_x": -25,
+                    "offset_y": -59,
+                    "attack_frame": false,
+                    "tick_override": null,
+                    "hitboxes": [],
+                    "hurtboxes": []
+                }
+            ]
+        },
+        "Attack": {
+            "tick": 120,
+            "loop": true,
+            "frames": [
+                {
+                    "x": 32,
+                    "y": 480,
+                    "w": 38,
+                    "h": 43,
+                    "origin_x": 0,
+                    "origin_y": 0,
+                    "offset_x": -14,
+                    "offset_y": -44,
+                    "attack_frame": false,
+                    "tick_override": null,
+                    "hitboxes": [],
+                    "hurtboxes": []
+                },
+                {
+                    "x": 82,
+                    "y": 480,
+                    "w": 38,
+                    "h": 43,
+                    "origin_x": 0,
+                    "origin_y": 0,
+                    "offset_x": -14,
+                    "offset_y": -44,
+                    "attack_frame": false,
+                    "tick_override": null,
+                    "hitboxes": [],
+                    "hurtboxes": []
+                },
+                {
+                    "x": 133,
+                    "y": 482,
+                    "w": 35,
+                    "h": 41,
+                    "origin_x": 0,
+                    "origin_y": 0,
+                    "offset_x": -16,
+                    "offset_y": -40,
+                    "attack_frame": false,
+                    "tick_override": null,
+                    "hitboxes": [],
+                    "hurtboxes": []
+                },
+                {
+                    "x": 182,
+                    "y": 479,
+                    "w": 38,
+                    "h": 44,
+                    "origin_x": 0,
+                    "origin_y": 0,
+                    "offset_x": -15,
+                    "offset_y": -46,
+                    "attack_frame": false,
+                    "tick_override": null,
+                    "hitboxes": [],
+                    "hurtboxes": []
+                },
+                {
+                    "x": 233,
+                    "y": 479,
+                    "w": 38,
+                    "h": 44,
+                    "origin_x": 0,
+                    "origin_y": 0,
+                    "offset_x": -15,
+                    "offset_y": -47,
+                    "attack_frame": false,
+                    "tick_override": null,
+                    "hitboxes": [],
+                    "hurtboxes": []
+                }
+            ]
+        }
+    }
+}

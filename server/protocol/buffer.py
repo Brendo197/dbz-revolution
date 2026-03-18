@@ -6,11 +6,15 @@ class Buffer:
         self.offset = 0
 
     # ========= WRITE =========
+
     def write_byte(self, value: int):
         self.data += struct.pack("<B", value)
 
-    def write_int(self, value: int):
+    def write_int(self, value: int):  # unsigned
         self.data += struct.pack("<H", value)
+
+    def write_short(self, value: int):  # signed
+        self.data += struct.pack("<h", value)
 
     def write_string(self, value: str):
         encoded = value.encode("utf-8")
@@ -18,13 +22,19 @@ class Buffer:
         self.data += encoded
 
     # ========= READ =========
+
     def read_byte(self) -> int:
         val = struct.unpack_from("<B", self.data, self.offset)[0]
         self.offset += 1
         return val
 
-    def read_int(self) -> int:
+    def read_int(self) -> int:  # unsigned
         val = struct.unpack_from("<H", self.data, self.offset)[0]
+        self.offset += 2
+        return val
+
+    def read_short(self) -> int:  # signed
+        val = struct.unpack_from("<h", self.data, self.offset)[0]
         self.offset += 2
         return val
 

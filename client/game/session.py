@@ -9,12 +9,6 @@ class GameSession:
         self._running = False
         self._ping_thread = None
 
-        self.chat_messages = {
-            "global": [],
-            "system": [],
-            "guild": []
-        }
-
         self.chat_unread = {
             "global": 0,
             "system": 0,
@@ -24,9 +18,13 @@ class GameSession:
         self.active_chat_channel = "global"
 
         self.warrior_templates = []
+
+
         self.open_admin_flag = False
         self.client_socket = None
+        self.editor_token = None
     def reset(self):
+
         # ===== SERVER =====
         self.server_online = False
         self.last_pong = 0
@@ -35,8 +33,8 @@ class GameSession:
         self.logged_in = False
         self.account_id = None
 
-        self.username = None  # login
-        self.password = None  # 🔥 ADICIONAR
+        self.username = None
+        self.password = None
 
         self.nickname = None
         self.has_character = False
@@ -46,7 +44,7 @@ class GameSession:
         self.login_error = None
         self.register_success = False
         self.register_error = None
-        # 🔥 CHAT
+
         # ===== CHAT =====
         self.chat_messages = {
             "global": [],
@@ -54,16 +52,25 @@ class GameSession:
             "guild": []
         }
 
-        # mensagens não lidas por canal
         self.chat_unread = {
             "global": 0,
             "system": 0,
             "guild": 0
-    }
+        }
+
+        # ===== SPRITES =====
+        self.sprite_list = []
+        self.sprite_project = None
+        self.sprite_cache = {}
+        self.current_sprite_id = None
+        self.sprite_project_updated = False
     @property
     def logged(self):
         return self.logged_in
 
+    @property
+    def socket(self):
+        return self.client_socket
     # =========================
     # LOGIN / REGISTER
     # =========================

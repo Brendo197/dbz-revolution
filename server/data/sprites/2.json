@@ -1,0 +1,25 @@
+{
+    "id": 2,
+    "animations": {
+        "Idle": {
+            "tick": 120,
+            "loop": true,
+            "frames": [
+                {
+                    "x": 128,
+                    "y": 30,
+                    "w": 23,
+                    "h": 51,
+                    "origin_x": 0,
+                    "origin_y": 0,
+                    "offset_x": -12,
+                    "offset_y": -51,
+                    "attack_frame": false,
+                    "tick_override": null,
+                    "hitboxes": [],
+                    "hurtboxes": []
+                }
+            ]
+        }
+    }
+}

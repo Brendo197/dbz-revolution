@@ -34,6 +34,9 @@ class ClientSocket:
         session.server_online = False
         session.last_pong = time.time()
 
+        # SALVAR SOCKET NA SESSION
+        session.client_socket = self
+
         self.running = True
         self.connected = True
         self.recv_buffer = bytearray()

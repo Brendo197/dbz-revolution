@@ -24,18 +24,26 @@ def send_chat(client_socket, message: str):
 # SEND PACKET BASE
 # =========================
 def send_packet(client_socket, data):
+
     if not client_socket:
+        print("Socket inválido")
         return False
 
     try:
+
         payload = data if isinstance(data, (bytes, bytearray)) else data.get_bytes()
+
         size = len(payload)
+
+        print("[SEND_PACKET] size:", size)
 
         if size <= 0 or size > MAX_PACKET_SIZE:
             print("[SEND_PACKET] Tamanho inválido:", size)
             return False
 
         packet = size.to_bytes(2, "little") + payload
+
+        print("[SEND_PACKET] enviando opcode:", payload[0])
 
         return client_socket.send(packet)
 
@@ -125,3 +133,91 @@ def send_save_warrior_template(sock, data):
     buffer.write_int(int(data["skill3_unlock"] or 0))
 
     send_packet(sock, buffer)
+
+def request_sprite_list(sock):
+
+    buffer = Buffer()
+    print("[CLIENT] REQUEST SPRITE LIST")
+    buffer.write_byte(C_REQUEST_SPRITE_LIST)
+
+    send_packet(sock, buffer)
+def request_sprite_project(sock, sprite_id):
+
+    buffer = Buffer()
+
+    buffer.write_byte(C_REQUEST_SPRITE_PROJECT)
+    buffer.write_int(sprite_id)
+
+    send_packet(sock, buffer)
+def send_save_sprite_project(sock, project):
+
+    buffer = Buffer()
+
+    buffer.write_byte(C_SAVE_SPRITE_PROJECT)
+
+    # id do sprite
+    buffer.write_int(project.id)
+
+    order = project.animation_order
+
+    # quantidade de animações
+    buffer.write_int(len(order))
+
+    for name in order:
+
+        anim = project.animations[name]
+
+        buffer.write_string(name)
+
+        buffer.write_int(anim.tick)
+        buffer.write_byte(1 if anim.loop else 0)
+
+        buffer.write_int(len(anim.frames))
+
+        for f in anim.frames:
+
+            buffer.write_int(f.x)
+            buffer.write_int(f.y)
+            buffer.write_int(f.w)
+            buffer.write_int(f.h)
+
+            buffer.write_int(f.origin_x)
+            buffer.write_int(f.origin_y)
+
+            buffer.write_short(int(f.offset_x))
+            buffer.write_short(int(f.offset_y))
+
+            # attack frame
+            buffer.write_byte(1 if f.attack_frame else 0)
+
+            # tick override
+            if f.tick_override is None:
+                buffer.write_byte(0)
+            else:
+                buffer.write_byte(1)
+                buffer.write_int(int(f.tick_override))
+
+            # hitboxes
+            buffer.write_int(len(f.hitboxes))
+            for box in f.hitboxes:
+                buffer.write_int(int(box["x"]))
+                buffer.write_int(int(box["y"]))
+                buffer.write_int(int(box["w"]))
+                buffer.write_int(int(box["h"]))
+
+            # hurtboxes
+            buffer.write_int(len(f.hurtboxes))
+            for box in f.hurtboxes:
+                buffer.write_int(int(box["x"]))
+                buffer.write_int(int(box["y"]))
+                buffer.write_int(int(box["w"]))
+                buffer.write_int(int(box["h"]))
+
+    return send_packet(sock, buffer)
+def create_sprite(sock):
+
+    buffer = Buffer()
+
+    buffer.write_byte(C_CREATE_SPRITE)
+
+    return send_packet(sock, buffer)

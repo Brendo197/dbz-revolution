@@ -5,117 +5,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6be84b89-3a32-4ade-a92e-12ec7aa97b4e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dbz-revolution.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/core/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/core/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/core/config_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/core/state.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/core/version.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/game/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/game/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/game/network.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/game/player.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/game/protocol.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/game/session.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/game/world.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/game/ws_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/screens/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/screens/character_select.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/screens/create_character.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/screens/game.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/screens/loading.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/screens/login.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/screens/register.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/ui/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/ui/admin_panel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/ui/bottom_menu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/ui/button.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/ui/chat_panel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/ui/checkbox.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/ui/config_panel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/ui/input.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/ui/mission_panel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/ui/panel_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/ui/toast.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/ui/top_bar.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/launcher/ui/ui_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/network/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/network/handle.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/network/receiver.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/network/sender.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/network/server_status.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/network/socket_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/protocol/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/protocol/buffer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/protocol/opcodes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/run_client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/core/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/core/client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/core/logger" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/core/logger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/core/protocol.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/core/server.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/core/world.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/migrate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/models/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/models/equipment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/models/inventory.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/models/player.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/models/player_warrior.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/models/team.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/models/vip.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/models/warrior_template.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/queries/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/queries/account.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/queries/inventory.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/queries/player.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/queries/team.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/queries/vip.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/queries/warrior.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/schema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/database/seed.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/gui/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/gui/components/logs_tab.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/gui/components/players_tab.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/gui/components/top_bar.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/gui/server_gui.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/gui/server_panel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/gui/tabs/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/gui/tabs/admin_tab.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/gui/tabs/logs_tab.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/gui/tabs/players_tab.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/gui/tabs/status_tab.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/handlers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/handlers/auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/handlers/chat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/handlers/system.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/launcher/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/launcher/log_handler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/launcher/server_gui.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/launcher/server_process.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/logs/server.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/migrate.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/network/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/network/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/protocol/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/protocol/buffer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/protocol/opcodes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/protocol/router.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/run_server.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/start_server.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/start_server_gui.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/canvas/sprite_canvas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/canvas/tools/base_tool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/canvas/tools/hitbox_tool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/canvas/tools/hurtbox_tool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/canvas/tools/move_tool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/canvas/tools/origin_tool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/canvas/tools/select_tool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/canvas/tools/slice_tool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/core/animation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/core/animation_player.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/core/auto_slice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/core/frame.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/core/hitbox.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/editor/animation_preview.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/editor/editor_state.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/editor/history.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/editor/preview_controls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/editor/preview_window.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/editor/sprite_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/editor/sprite_network.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/projects/1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/run_editor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/ui/animation_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/ui/frame_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/ui/inspector.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/ui/layout.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/ui/sprite_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/ui/timeline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tools/sprite_editor/ui/toolbar.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/core/sessions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/handlers/sprite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/DBZ Revolution/Analysis-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/DBZ Revolution/Analysis-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/DBZ Revolution/DBZ Revolution.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/DBZ Revolution/DBZ Revolution.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/DBZ Revolution/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/DBZ Revolution/EXE-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/DBZ Revolution/PKG-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/DBZ Revolution/PKG-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/DBZ Revolution/PYZ-00.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/DBZ Revolution/PYZ-00.pyz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/DBZ Revolution/PYZ-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/DBZ Revolution/PYZ-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/DBZ Revolution/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/DBZ Revolution/base_library.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/DBZ Revolution/warn-DBZ Revolution.txt" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/DBZ Revolution/warn-DBZ Revolution.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/build/DBZ Revolution/xref-DBZ Revolution.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/build/DBZ Revolution/xref-DBZ Revolution.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/dist/DBZ Revolution.exe" beforeDir="false" afterPath="$PROJECT_DIR$/client/dist/DBZ Revolution.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/dist/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/game/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/game/session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/launcher/ui/admin_panel.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/launcher/ui/admin_panel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/network/handle.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/network/handle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/network/receiver.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/network/receiver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/network/sender.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/network/sender.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/network/socket_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/network/socket_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/protocol/buffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/protocol/buffer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/protocol/opcodes.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/protocol/opcodes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/handlers/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/handlers/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/protocol/buffer.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/protocol/buffer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/protocol/opcodes.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/protocol/opcodes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/protocol/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/protocol/router.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +119,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/dbz-revolution/server/alembic&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/dbz-revolution/client/tools&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -186,11 +132,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\dbz-revolution\client\tools" />
+      <recent name="C:\dbz-revolution\client\tools\sprite_editor" />
       <recent name="C:\dbz-revolution\server\alembic" />
       <recent name="C:\dbz-revolution\server\app\GUI" />
       <recent name="C:\dbz-revolution\server\database\queries" />
-      <recent name="C:\dbz-revolution\server\database\model" />
-      <recent name="C:\dbz-revolution\server\handlers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\dbz-revolution\server\gui" />

@@ -1,6 +1,7 @@
 from protocol.buffer import Buffer
 from protocol.opcodes import *
 from core.protocol import send_packet
+from core.sessions import sessions
 from database.db import get_session
 from database.models.player import Player
 from database.models.warrior_template import WarriorTemplate
@@ -27,6 +28,11 @@ from database.queries import (
 )
 
 import hashlib
+import secrets
+# =============================
+# SESSÕES EDITOR
+# =============================
+
 
 
 # =====================================================
@@ -176,6 +182,7 @@ def handle_register_step2(client, buffer: Buffer):
 # =====================================================
 
 def handle_login(client, buffer: Buffer):
+
     login = buffer.read_string()
     password = buffer.read_string()
 
@@ -201,8 +208,11 @@ def handle_login(client, buffer: Buffer):
 
     # 🔐 Impede múltiplos logins
     for c in client.server.clients:
+
         if c is not client and getattr(c, "account_id", None) == account.id:
+
             print(f"[SECURITY] Tentativa de login duplicado da conta {account.login}")
+
             _send_login_fail(
                 client,
                 LOGIN_FAIL_MULTIPLE,
@@ -210,46 +220,81 @@ def handle_login(client, buffer: Buffer):
             )
             return
 
-    # só depois que validou:
+    # =============================
+    # GERA TOKEN DO EDITOR
+    # =============================
+
+    token = secrets.token_hex(16)
+
+    print("[SERVER] TOKEN GERADO:", token)
+
+    sessions[token] = {
+        "account_id": account.id,
+        "is_admin": bool(account.is_admin)
+    }
+
+    # =============================
+    # SALVA NO CLIENT
+    # =============================
+
     client.account = account
     client.is_admin = bool(account.is_admin)
 
     player = get_player_by_account(account.id)
 
-    # Se não tem personagem ainda
+    # =============================
+    # SEM PERSONAGEM
+    # =============================
+
     if not player:
+
         out = Buffer()
+
         out.write_byte(S_LOGIN_OK)
+
         out.write_int(account.id)
         out.write_string("")
         out.write_byte(account.is_admin)
-        out.write_byte(0)  # has_character = False
+        out.write_byte(0)  # has_character
+
+        out.write_string(token)  # 🔥 TOKEN
 
         send_packet(client, out)
 
         client.account_id = account.id
         client.player_id = None
+
         return
 
-    # ===== SALVA DADOS NO CLIENT =====
+    # =============================
+    # SALVA DADOS
+    # =============================
+
     client.account_id = account.id
     client.player_id = player.id
     client.nickname = player.nickname
 
-    # ===== CARREGA DADOS DO JOGO =====
+    # =============================
+    # CARREGA DADOS
+    # =============================
+
     warriors = get_warriors(player.id)
     inventory = get_inventory(player.id)
     team = get_team(player.id)
     vip = get_vip(player.id)
 
-    # ===== ENVIA LOGIN OK =====
+    # =============================
+    # LOGIN OK
+    # =============================
+
     out = Buffer()
+
     out.write_byte(S_LOGIN_OK)
 
     out.write_int(account.id)
     out.write_string(player.nickname)
     out.write_byte(account.is_admin)
-    out.write_byte(1)  # has_character = True
+    out.write_byte(1)  # has_character
 
     out.write_int(player.level)
     out.write_int(player.exp)
@@ -260,8 +305,20 @@ def handle_login(client, buffer: Buffer):
 
     out.write_int(vip.vip_days if vip else 0)
 
+    # =============================
+    # TOKEN DO EDITOR
+    # =============================
+
+    out.write_string(token)
+
+    # =============================
+    # WARRIORS
+    # =============================
+
     out.write_int(len(warriors))
+
     for w in warriors:
+
         out.write_int(w.id)
         out.write_string(w.warrior_type)
         out.write_int(w.level)
@@ -269,32 +326,51 @@ def handle_login(client, buffer: Buffer):
         out.write_int(w.evolution)
         out.write_int(w.skin)
 
+    # =============================
+    # INVENTORY
+    # =============================
+
     out.write_int(len(inventory))
+
     for item in inventory:
+
         out.write_int(item.slot)
         out.write_string(item.item_id)
         out.write_int(item.item_level)
 
+    # =============================
+    # TEAM
+    # =============================
+
     out.write_int(len(team))
+
     for t in team:
+
         out.write_int(t.position)
         out.write_int(t.warrior_id)
 
     send_packet(client, out)
 
-    # ===== MENSAGEM GLOBAL LOGIN =====
+    # =============================
+    # GLOBAL MESSAGE
+    # =============================
+
     broadcast_system_message(
         client.server,
         f"{player.nickname} logou."
     )
 
-    # ===== MENSAGEM PRIVADA =====
+    # =============================
+    # WELCOME MESSAGE
+    # =============================
+
     welcome = Buffer()
+
     welcome.write_byte(S_CHAT)
     welcome.write_string("Sistema")
     welcome.write_string("Bem-vindo ao DBZ Revolution!")
-    send_packet(client, welcome)
 
+    send_packet(client, welcome)
 
 # =====================================================
 # HELPERS

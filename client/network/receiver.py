@@ -57,38 +57,57 @@ def handle_packet(client_socket, data: bytes):
         # ======================================
 
         elif opcode == S_LOGIN_OK:
-            try:
-                session.account_id = buffer.read_int()
-                session.nickname = buffer.read_string()
-                session.is_admin = buffer.read_byte()
-                session.has_character = buffer.read_byte() == 1
 
-                if not session.has_character:
-                    session.logged_in = True
+            session.account_id = buffer.read_int()
 
-                    if login_callback:
-                        cb = login_callback
-                        login_callback = None
-                        _safe_callback(cb, True)
-                    return
+            session.nickname = buffer.read_string()
 
-                session.level = buffer.read_int()
-                session.exp = buffer.read_int()
-                session.bank_zeny = buffer.read_int()
-                session.sprite = buffer.read_int()
-                session.wins = buffer.read_int()
-                session.loses = buffer.read_int()
-                session.vip_days = buffer.read_int()
+            session.is_admin = buffer.read_byte()
+
+            session.has_character = buffer.read_byte() == 1
+
+            if not session.has_character:
 
                 session.logged_in = True
 
                 if login_callback:
                     cb = login_callback
+
                     login_callback = None
+
                     _safe_callback(cb, True)
 
-            except Exception as e:
-                print("[CLIENT] Erro processando S_LOGIN_OK:", e)
+                return
+
+            session.level = buffer.read_int()
+
+            session.exp = buffer.read_int()
+
+            session.bank_zeny = buffer.read_int()
+
+            session.sprite = buffer.read_int()
+
+            session.wins = buffer.read_int()
+
+            session.loses = buffer.read_int()
+
+            session.vip_days = buffer.read_int()
+
+            # 🔐 TOKEN DO EDITOR
+
+            session.editor_token = buffer.read_string()
+
+            session.logged_in = True
+
+            print("TOKEN RECEBIDO:", session.editor_token)
+
+            if login_callback:
+                cb = login_callback
+
+                login_callback = None
+
+                _safe_callback(cb, True)
+
 
         elif opcode == S_LOGIN_FAIL:
             try:
@@ -176,7 +195,12 @@ def handle_packet(client_socket, data: bytes):
         # ======================================
         # UNKNOWN OPCODE
         # ======================================
-
+        elif opcode == S_SPRITE_CREATED:
+            handle_sprite_created(buffer)
+        elif opcode == S_SEND_SPRITE_PROJECT:
+            handle_send_sprite_project(buffer)
+        elif opcode == S_SEND_SPRITE_LIST:
+            handle_send_sprite_list(buffer)
         elif opcode == S_SEND_WARRIOR_TEMPLATES:
             handle_send_warrior_templates(buffer)
         else:
